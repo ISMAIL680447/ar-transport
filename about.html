@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - FastMove Transport</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+       <!-- Logo -->
+    <a href="index.html" class="logo">
+      <img src="logo.jpg" alt="FastMove Transport Logo" style="height:70px;width: 100px;">
+    </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="booking.html">Booking</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="page">
+    <h2>About Us</h2>
+    <p>AR  Transport was founded with a mission to provide reliable, affordable, and timely transportation services across India.</p>
+    <p>Our vision is to become India’s most trusted logistics partner with a focus on customer satisfaction and operational excellence.</p>
+    <p>We specialize in goods transport, logistics, and packers & movers services with a modern fleet and experienced drivers.</p>
+  </section>
+  <section class="about-mission">
+  <div class="mission-card">
+    <h3>Our Mission</h3>
+    <p>To deliver every shipment safely and on time while providing excellent customer service.</p>
+  </div>
+  <div class="mission-card">
+    <h3>Our Vision</h3>
+    <p>To be the most trusted and reliable transport company in India.</p>
+  </div>
+</section>
+<section class="about-testimonials">
+  <h2>What Our Clients Say</h2>
+  <div class="testimonial-container">
+    <div class="testimonial-slide active">
+      <p>“FastMove Transport delivered my goods on time, very professional service!”</p>
+      <h4>- Ramesh K.</h4>
+    </div>
+    <div class="testimonial-slide">
+      <p>“Reliable trucks, excellent drivers, highly recommended.”</p>
+      <h4>- Priya S.</h4>
+    </div>
+    <div class="testimonial-slide">
+      <p>“Excellent support and timely delivery every time!”</p>
+      <h4>- Ajay T.</h4>
+    </div>
+  </div>
+</section>
+<script>
+let slides = document.querySelectorAll('.testimonial-slide');
+let currentIndex = 0;
+
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.classList.remove('active');
+    if(i === index) slide.classList.add('active');
+  });
+}
+
+// Auto slide every 4 seconds
+setInterval(() => {
+  currentIndex++;
+  if(currentIndex >= slides.length) currentIndex = 0;
+  showSlide(currentIndex);
+}, 4000);
+</script>
+<section class="about-features">
+  <h2>Why Choose AR Transport?</h2>
+  <ul>
+    <li>✅ Fast & Reliable Delivery</li>
+    <li>✅ GPS Tracking for Every Vehicle</li>
+    <li>✅ Fully Insured Shipments</li>
+    <li>✅ Professional & Experienced Drivers</li>
+    <li>✅ Affordable & Transparent Pricing</li>
+  </ul>
+</section>
+
+<footer style="background:#222; color:white; padding:20px 15px; text-align:center; font-size:14px;">
+  <div style="max-width:1000px; margin:auto; display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:15px;">
+
+    <!-- Contact Info -->
+    <div style="margin-bottom:10px;">
+      🏠 Auto nagar, MG Road, Vijayawada, Andhra Pradesh | 📞 +91 6301155739
+    </div>
+
+    <!-- Social Media -->
+    <div style="margin-bottom:10px;">
+      <a href="https://instagram.com/yourusername" target="_blank" style="color:white; margin-right:10px; text-decoration:none;">📸 Instagram</a>
+      <a href="https://facebook.com/yourusername" target="_blank" style="color:white; margin-right:10px; text-decoration:none;">📘 Facebook</a>
+    </div>
+
+  </div>
+
+  <div style="color:#aaa; font-size:12px; margin-top:10px;">
+    © 2025 AR Transport. All Rights Reserved.
+  </div>
+</footer>
+
+</body>
+</html>

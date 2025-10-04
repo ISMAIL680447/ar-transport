@@ -1,0 +1,326 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  line-height: 1.6;
+  background: #f9f9f9;
+  color: #333;
+}
+
+header {
+  background: #222;
+  color: #fff;
+  padding: 15px 20px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: #f4b400;
+}
+
+.hero {
+  background: url('transport-bg.jpg') no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.hero h2 {
+  font-size: 36px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 15px;
+  background: #f4b400;
+  color: #000;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.highlights {
+  display: flex;
+  justify-content: space-around;
+  margin: 40px 20px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 40px;
+}
+.hero {
+  height: 100vh; /* full screen */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  /* Blue to white gradient background */
+  background: linear-gradient(to bottom, #007BFF, #ffffff);
+  color: #000; /* text color */
+}
+
+.hero h2 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 24px;
+  font-weight: 500;
+}
+.fleet-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.fleet-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  width: 250px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.fleet-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.fleet-card h3 {
+  margin: 10px 0;
+  color: #007BFF;
+  font-size: 18px;
+}
+
+.fleet-card:hover {
+  transform: scale(1.05);
+}
+.fleet-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.fleet-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  width: 250px;
+  text-align: center;
+  transition: transform 0.3s;
+  padding-bottom: 15px;
+}
+
+.fleet-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.fleet-card h3 {
+  margin: 10px 0;
+  color: #007BFF;
+  font-size: 18px;
+}
+
+/* Book Now Button */
+.btn-book {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 10px;
+  background: #f4b400;
+  color: #000;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-book:hover {
+  background: #e0a800;
+}
+
+.fleet-card:hover {
+  transform: scale(1.05);
+}
+.about-mission {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 30px 20px;
+  flex-wrap: wrap;
+}
+
+.mission-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  width: 300px;
+  text-align: center;
+}
+
+.mission-card h3 {
+  color: #007BFF;
+  margin-bottom: 10px;
+}
+
+.mission-card p {
+  color: #555;
+}
+.about-features ul {
+  list-style: none;
+  max-width: 600px;
+  margin: auto;
+  padding: 0;
+}
+
+.about-features li {
+  background: #fff;
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  font-size: 16px;
+}
+.about-testimonials {
+  max-width: 600px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.about-testimonials h2 {
+  color: #007BFF;
+  margin-bottom: 30px;
+}
+
+.testimonial-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonial-slide {
+  display: none;
+  background: #fff;
+  padding: 30px 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.testimonial-slide.active {
+  display: block;
+}
+
+.testimonial-slide p {
+  font-style: italic;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.testimonial-slide h4 {
+  color: #007BFF;
+  margin: 0;
+}
+.highlights .card {
+  background: #fff;
+  padding: 25px 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  font-size: 18px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+  cursor: pointer;
+}
+
+.highlights .card:hover {
+  transform: translateY(-8px) scale(1.05); /* Slight lift and zoom */
+  box-shadow: 0 12px 25px rgba(0,0,0,0.2); /* Stronger shadow */
+  background: #e0f0ff; /* Blueish background on hover */
+}
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: #000;
+  border-radius: 2px;
+}
+
+/* Mobile Styles */
+@media (max-width:768px){
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    background: #fff;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    padding: 10px 0;
+    gap: 15px;
+    z-index: 1000;
+  }
+  .nav-links li {
+    margin: 10px 0;
+  }
+  .hamburger {
+    display: flex;
+  }
+}
