@@ -1,0 +1,8 @@
+/* ------------------ Smooth Dropdown Animation ------------------ */
+.nav-links {
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-links.show {
+  display: flex !important;
+}
