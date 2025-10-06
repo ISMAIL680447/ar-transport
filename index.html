@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <!-- SEO Meta -->
   <title>AR Transport - Best Transport & Cargo Services in Vijayawada</title>
   <meta name="description" content="AR Transport provides fast, reliable, and safe goods transport, cargo delivery, and logistics services in Vijayawada. Book now for on-time delivery.">
@@ -27,13 +27,14 @@
         <li><a href="booking.html">Booking</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
-    </nav>
-    <div class="hamburger" onclick="toggleMenu()">
-  <div></div>
-  <div></div>
-  <div></div>
-</div>
 
+      <!-- Hamburger -->
+      <div class="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </nav>
   </header>
 
   <!-- Hero Section -->
@@ -51,32 +52,24 @@
   </section>
 
   <!-- Footer -->
-  <footer style="background:#121213; color:rgb(247, 248, 250); padding:20px 15px; text-align:center; font-size:14px;">
-    <div style="max-width:1000px; margin:auto; display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:15px;">
-
-      <!-- Contact Info -->
-      <div style="margin-bottom:10px;">
-        🏠 Auto Nagar, MG Road, Vijayawada, Andhra Pradesh | 📞 +91 6301155739
+  <footer>
+    <div class="footer-container">
+      <div>🏠 Auto Nagar, MG Road, Vijayawada, Andhra Pradesh | 📞 +91 6301155739</div>
+      <div>
+        <a href="https://www.instagram.com/ar.transports?igsh=ZG01bHFqbmM3ZXF6" target="_blank">📸 Instagram</a>
+        <a href="https://facebook.com/yourusername" target="_blank">📘 Facebook</a>
       </div>
-
-      <!-- Social Media -->
-      <div style="margin-bottom:10px;">
-        <a href="https://instagram.com/yourusername" target="_blank" style="color:white; margin-right:10px; text-decoration:none;">📸 Instagram</a>
-        <a href="https://facebook.com/yourusername" target="_blank" style="color:white; margin-right:10px; text-decoration:none;">📘 Facebook</a>
-      </div>
-
     </div>
-
-    <div style="color:#aaa; font-size:12px; margin-top:10px;">
-      © 2025 AR Transport. All Rights Reserved.
-    </div>
+    <div class="footer-copy">© 2025 AR Transport. All Rights Reserved.</div>
   </footer>
-  <script>
-function toggleMenu() {
-  const navLinks = document.querySelector('.nav-links');
-  navLinks.classList.toggle('show');
-}
-</script>
 
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('show'); // toggle mobile menu
+    });
+  </script>
 </body>
 </html>

@@ -324,3 +324,22 @@ footer {
     display: flex;
   }
 }
+/* Show nav-links when hamburger is clicked */
+.nav-links.show {
+  display: flex !important;
+  flex-direction: column;
+  background: #fff;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  padding: 10px 0;
+  gap: 15px;
+  z-index: 1000;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.nav-links.show li a {
+  color: #000; /* links visible on white background */
+  font-weight: bold;
+}

@@ -3,57 +3,110 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Booking </title>
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <title>Booking - AR Transport</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Font Awesome for icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
   <style>
-    * { margin:0; padding:0; box-sizing:border-box; font-family:'Roboto', sans-serif; }
-    body { background:#f0f2f5; color:#333; line-height:1.6; }
-
-    header { background:#222; color:white; padding:15px 20px; }
-    nav { display:flex; justify-content:space-between; align-items:center; }
-    nav .logo { font-size:22px; font-weight:bold; }
-    nav ul { display:flex; list-style:none; }
-    nav ul li { margin-left:15px; }
-    nav ul li a { color:white; text-decoration:none; transition:0.3s; }
-    nav ul li a:hover, nav ul li a.active { color:#f4b400; }
-
-    .page { padding:40px 20px; display:flex; justify-content:center; }
-    .booking-card {
-      background:white; padding:30px; border-radius:12px; box-shadow:0 8px 20px rgba(0,0,0,0.1); width:100%; max-width:500px;
+    /* Booking form specific overrides */
+    .page {
+      padding: 40px 20px;
+      display: flex;
+      justify-content: center;
     }
-    .booking-card h2 { text-align:center; margin-bottom:25px; color:#222; font-size:28px; }
 
-    form { display:flex; flex-direction:column; }
-    form .input-group { position:relative; margin-bottom:15px; }
-    form input, form button { width:100%; padding:12px 15px; border-radius:8px; border:1px solid #ccc; font-size:16px; }
-    form input:focus { outline:none; border-color:#f4b400; }
-    form label { position:absolute; top:-10px; left:12px; background:white; font-size:12px; color:#555; padding:0 5px; }
-    form button { background:#f4b400; border:none; font-weight:bold; color:#000; cursor:pointer; transition:0.3s; margin-top:10px; }
-    form button:hover { background:#e0a800; }
+    .booking-card {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 500px;
+    }
 
-    footer { background:#222; color:white; text-align:center; padding:15px 0; margin-top:40px; }
+    .booking-card h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #007BFF;
+      font-size: 28px;
+    }
 
-    /* Icons inside input (optional) */
-    .input-group i { position:absolute; top:50%; left:10px; transform:translateY(-50%); color:#555; }
-    form input { padding-left:35px; }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .input-group {
+      position: relative;
+      margin-bottom: 15px;
+    }
+
+    .input-group i {
+      position: absolute;
+      top: 50%;
+      left: 10px;
+      transform: translateY(-50%);
+      color: #555;
+    }
+
+    form input, form button {
+      width: 100%;
+      padding: 12px 15px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+      padding-left: 35px;
+    }
+
+    form input:focus {
+      outline: none;
+      border-color: #007BFF;
+    }
+
+    form button {
+      background: #f4b400;
+      border: none;
+      font-weight: bold;
+      color: #000;
+      cursor: pointer;
+      transition: 0.3s;
+      margin-top: 10px;
+      padding-left: 15px;
+    }
+
+    form button:hover {
+      background: #e0a800;
+    }
+
+    @media(max-width: 768px) {
+      .page { padding: 20px 10px; }
+    }
   </style>
 </head>
 <body>
 
 <header>
   <nav>
-     <!-- Logo -->
+    <!-- Logo -->
     <a href="index.html" class="logo">
-      <img src="logo.jpg" alt="FastMove Transport Logo" style="height:70px;width: 100px;">
+      <img src="logo.jpg" alt="AR Transport Logo" style="height:70px;width: 100px;">
     </a>
-<ul>
+
+    <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="services.html">Services</a></li>
       <li><a href="booking.html" class="active">Booking</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
+
+    <div class="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
   </nav>
 </header>
 
@@ -94,53 +147,48 @@
   </div>
 </section>
 
-
-<!-- Font Awesome for icons -->
-<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<footer>
+  <div class="footer-container">
+    <div>🏠 Auto Nagar, MG Road, Vijayawada, Andhra Pradesh | 📞 +91 6301155739</div>
+    <div>
+      <a href="https://www.instagram.com/ar.transports?igsh=ZG01bHFqbmM3ZXF6" target="_blank">📸 Instagram</a>
+      <a href="https://facebook.com/yourusername" target="_blank">📘 Facebook</a>
+    </div>
+  </div>
+  <div class="footer-copy">© 2025 AR Transport. All Rights Reserved.</div>
+</footer>
 
 <script>
-function sendBooking() {
-  let name = document.getElementById("name").value;
-  let phone = document.getElementById("phone").value;
-  let pickup = document.getElementById("pickup").value;
-  let drop = document.getElementById("drop").value;
-  let goods = document.getElementById("goods").value;
-  let date = document.getElementById("date").value;
-  let time = document.getElementById("time").value;
+  // Hamburger toggle
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
 
-  let msg = `New Transport Booking:%0A` +
-            `Name: ${name}%0A` +
-            `Phone: ${phone}%0A` +
-            `Pickup: ${pickup}%0A` +
-            `Drop: ${drop}%0A` +
-            `Goods: ${goods}%0A` +
-            `Date: ${date}%0A` +
-            `Time: ${time}`;
+  // WhatsApp booking
+  function sendBooking() {
+    let name = document.getElementById("name").value;
+    let phone = document.getElementById("phone").value;
+    let pickup = document.getElementById("pickup").value;
+    let drop = document.getElementById("drop").value;
+    let goods = document.getElementById("goods").value;
+    let date = document.getElementById("date").value;
+    let time = document.getElementById("time").value;
 
-  window.open(`https://wa.me/916301155739?text=${msg}`, "_blank");
-  alert("Your booking details have been sent to WhatsApp!");
-}
+    let msg = `New Transport Booking:%0A` +
+              `Name: ${name}%0A` +
+              `Phone: ${phone}%0A` +
+              `Pickup: ${pickup}%0A` +
+              `Drop: ${drop}%0A` +
+              `Goods: ${goods}%0A` +
+              `Date: ${date}%0A` +
+              `Time: ${time}`;
+
+    window.open(`https://wa.me/916301155739?text=${msg}`, "_blank");
+    alert("Your booking details have been sent to WhatsApp!");
+  }
 </script>
-<footer style="background:#222; color:white; padding:20px 15px; text-align:center; font-size:14px;">
-  <div style="max-width:1000px; margin:auto; display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:15px;">
-
-    <!-- Contact Info -->
-    <div style="margin-bottom:10px;">
-      🏠 Auto nagar, MG Road, Vijayawada, Andhra Pradesh | 📞 +91 6301155739
-    </div>
-
-    <!-- Social Media -->
-    <div style="margin-bottom:10px;">
-      <a href="https://instagram.com/yourusername" target="_blank" style="color:white; margin-right:10px; text-decoration:none;">📸 Instagram</a>
-      <a href="https://facebook.com/yourusername" target="_blank" style="color:white; margin-right:10px; text-decoration:none;">📘 Facebook</a>
-    </div>
-
-  </div>
-
-  <div style="color:#aaa; font-size:12px; margin-top:10px;">
-    © 2025 AR Transport. All Rights Reserved.
-  </div>
-</footer>
 
 </body>
 </html>
